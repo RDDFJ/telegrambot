@@ -6,7 +6,7 @@ from aiogram.filters import Command
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
 # ВСТАВЬТЕ ВАШ ТОКЕН
-API_TOKEN = '8253785216:AAFBkQq1iKFGckU5fiaM9x_LkTvxAqeynwI'
+API_TOKEN = os.getenv('BOT_TOKEN')
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
@@ -118,4 +118,5 @@ async def main():
             await asyncio.sleep(5)
 
 if __name__ == '__main__':
+
     asyncio.run(main())
